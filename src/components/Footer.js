@@ -1,4 +1,11 @@
-import { Facebook, Instagram, LinkedIn } from "@material-ui/icons";
+import {
+  Email,
+  Facebook,
+  Instagram,
+  LinkedIn,
+  Phone,
+  Room,
+} from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 
@@ -60,6 +67,16 @@ const Right = styled.div`
   padding: 20px;
 `;
 
+const ContactItem = styled.div`
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+`;
+
+const Payment = styled.img`
+  width: 30%;
+`;
+
 const Footer = () => {
   return (
     <Container>
@@ -92,7 +109,19 @@ const Footer = () => {
           <ListItem>Terms</ListItem>
         </List>
       </Center>
-      <Right></Right>
+      <Right>
+        <Title>Contact</Title>
+        <ContactItem>
+          <Room style={{ marginRight: "10px" }} /> 354 NordHavn, Copenhagen
+        </ContactItem>
+        <ContactItem>
+          <Phone style={{ marginRight: "10px" }} /> +45 91437116
+        </ContactItem>
+        <ContactItem>
+          <Email style={{ marginRight: "10px" }} /> outlaws@gmail.com
+        </ContactItem>
+        <Payment src="https://cdn.pixabay.com/photo/2013/03/02/01/25/american-express-89024_960_720.jpg" />
+      </Right>
     </Container>
   );
 };
